@@ -1,0 +1,39 @@
+{
+  "name": "slatis-nyx",
+  "displayName": "Slatis Nyx",
+  "description": "Blacked-out dark theme built on IBM Carbon Blue, with semantic-token highlighting and higher-contrast borders.",
+  "version": "0.1.0",
+  "publisher": "utreras",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "black",
+    "ibm",
+    "carbon",
+    "semantic"
+  ],
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utreras/slatis-nyx"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Slatis Nyx",
+        "uiTheme": "vs-dark",
+        "path": "./themes/slatis-nyx-color-theme.json"
+      }
+    ]
+  }
+}
