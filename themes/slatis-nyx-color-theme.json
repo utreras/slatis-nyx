@@ -43,6 +43,72 @@
   "semanticHighlighting": true,
 
   "colors": {
+
+    // ---- Command center (header search pill) ----
+    // Translucent so it reads as glass sitting on the title bar rather than a
+    // second opaque slab. Alpha composites against titleBar.activeBackground.
+    "commandCenter.background": "#ffffff08",
+    "commandCenter.foreground": "#8e8f8f",
+    "commandCenter.border": "#2c2e2d",
+    "commandCenter.activeBackground": "#ffffff12",
+    "commandCenter.activeForeground": "#cdcecd",
+    "commandCenter.activeBorder": "#4589ff",
+    "commandCenter.inactiveForeground": "#4a4c4b",
+    "commandCenter.inactiveBorder": "#202221",
+    "commandCenter.debuggingBackground": "#0f62fe30",
+
+    // ---- Window frame (needs window.titleBarStyle: custom) ----
+    "window.activeBorder": "#383a39",
+    "window.inactiveBorder": "#202221",
+
+    // ---- Activity bar: tinted slab on the active item, not just a hairline ----
+    "activityBar.activeBackground": "#4589ff14",
+    "activityBar.activeFocusBorder": "#4589ff",
+    "activityBar.dropBorder": "#4589ff",
+    "activityBarTop.background": "#000000",
+    "activityBarTop.foreground": "#cdcecd",
+    "activityBarTop.inactiveForeground": "#4a4c4b",
+    "activityBarTop.activeBorder": "#4589ff",
+    "activityBarTop.activeBackground": "#4589ff14",
+    "activityBarTop.dropBorder": "#4589ff",
+    "sideBarActivityBarTop.border": "#2c2e2d",
+
+    // Split badges: generic counters (git changes, extensions) are blue,
+    // errors are red, warnings yellow. Separate keys, verified in 1.136.
+    "activityErrorBadge.background": "#fa4d56",
+    "activityErrorBadge.foreground": "#ffffff",
+    "activityWarningBadge.background": "#f1c21b",
+    "activityWarningBadge.foreground": "#000000",
+    "profileBadge.background": "#202221",
+    "profileBadge.foreground": "#cdcecd",
+    "profiles.sashBorder": "#2c2e2d",
+
+    // ---- Sticky scroll: translucent, so code slides visibly underneath ----
+    "editorStickyScroll.background": "#151616e6",
+    "editorStickyScroll.border": "#2c2e2d",
+    "editorStickyScroll.shadow": "#000000a0",
+    "editorStickyScrollHover.background": "#202221e6",
+    "editorStickyScrollGutter.background": "#151616e6",
+    "sideBarStickyScroll.background": "#000000e6",
+    "sideBarStickyScroll.border": "#2c2e2d",
+    "sideBarStickyScroll.shadow": "#000000a0",
+    "panelStickyScroll.background": "#0b0b0be6",
+    "panelStickyScroll.border": "#2c2e2d",
+    "panelStickyScroll.shadow": "#000000a0",
+    "panelStickyScrollHover.background": "#202221e6",
+
+    // ---- Toolbars / banner ----
+    "toolbar.hoverBackground": "#4589ff20",
+    "toolbar.hoverOutline": "#00000000",
+    "toolbar.activeBackground": "#4589ff30",
+    "banner.background": "#151616",
+    "banner.foreground": "#cdcecd",
+    "banner.iconForeground": "#4589ff",
+    "menubar.selectionBorder": "#00000000",
+    "editorGroup.emptyBackground": "#000000",
+    "sideBySideEditor.horizontalBorder": "#2c2e2d",
+    "sideBySideEditor.verticalBorder": "#2c2e2d",
+
     // ---- Editor ----
     "editor.background": "#0b0b0b",
     "editor.foreground": "#cdcecd",
@@ -264,9 +330,9 @@
     "activityBar.foreground": "#cdcecd",
     "activityBar.inactiveForeground": "#4a4c4b",
     "activityBar.activeBorder": "#4589ff",
-    "activityBarBadge.background": "#fa4d56",
+    "activityBarBadge.background": "#4589ff",
     "activityBarBadge.foreground": "#ffffff",
-    "badge.background": "#fa4d56",
+    "badge.background": "#4589ff",
     "badge.foreground": "#ffffff",
 
     "titleBar.activeBackground": "#000000",

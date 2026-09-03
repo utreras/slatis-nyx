@@ -1,13 +1,20 @@
 # Slatis Nyx
 
-Blacked-out dark theme for VS Code. Descends from Black Material, rebuilt around
-IBM Carbon Blue with a semantic-token layer.
+> A gift from Slatis to the engineers who work while the world sleeps.
+>
+> Nyx was the goddess of night — and in every telling, night is not the absence
+> of something. It is its own thing, first-born, with its own weather. The room
+> gets quiet, the meetings stop, and what is left is you and the problem.
+>
+> This theme is for those hours. Darkness you choose, not darkness you endure.
+
+Blacked-out dark theme for VS Code, descended from Black Material.
 
 ## What changed vs. the parent theme
 
-- **IBM Carbon Blue is the UI accent.** Blue 50 `#4589ff` drives cursor, focus,
-  active tab, progress and selection. Blue 60 `#0f62fe` is used only as a fill
-  behind white text — at 3.9:1 on `#0b0b0b` it fails AA as text or as a hairline.
+- **The Slatis blue is the UI accent.** `#4589ff` drives cursor, focus, active
+  tab, progress and selection. The deeper `#0f62fe` is used only as a fill behind
+  white text — at 3.9:1 on `#0b0b0b` it fails AA as text or as a hairline.
 - **Blue is banned from syntax.** Functions moved to purple `#c9a3f0`, the way
   GitHub Dark resolves the same collision. Chrome and content never share a hue.
 - **Borders are visible.** `#151616` (≈1.05:1 on black) was replaced by
@@ -30,9 +37,14 @@ IBM Carbon Blue with a semantic-token layer.
 | Added / success | `#42be65` | |
 | Warning | `#f1c21b` | |
 
-Badges are red globally: VS Code exposes `activityBarBadge.background` as a
-single key with no per-view override. Git-specific blue lives in
-`gitDecoration.*` and `editorGutter.modifiedBackground` instead.
+Badges are split by meaning: counters that just tell you something changed
+(git, extensions) are blue via `activityBarBadge`; things that want your
+attention are red via `activityErrorBadge` and yellow via `activityWarningBadge`.
+
+The command centre, sticky scroll and the active activity-bar item use alpha
+compositing rather than opaque fills, so layers read as stacked glass. VS Code
+has no window-level transparency — alpha composites against the workbench
+surface underneath, never against the desktop.
 
 ## Install (local dev)
 

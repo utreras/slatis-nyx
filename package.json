@@ -1,7 +1,7 @@
 {
   "name": "slatis-nyx",
   "displayName": "Slatis Nyx",
-  "description": "Blacked-out dark theme built on IBM Carbon Blue, with semantic-token highlighting and higher-contrast borders.",
+  "description": "A gift from Slatis to the engineers who work while the world sleeps. Nyx was the goddess of night, and night was never the absence of something. Darkness you choose, not darkness you endure.",
   "version": "0.1.0",
   "publisher": "utreras",
   "license": "MIT",
@@ -15,8 +15,7 @@
     "theme",
     "dark",
     "black",
-    "ibm",
-    "carbon",
+    "slatis",
     "semantic"
   ],
   "galleryBanner": {
