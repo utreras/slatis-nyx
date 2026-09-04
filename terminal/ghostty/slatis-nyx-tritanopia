@@ -1,0 +1,22 @@
+# Slatis Nyx Tritanopia
+palette = 0=#2c2e2d
+palette = 1=#ff7b72
+palette = 2=#a5d6ff
+palette = 3=#ffc1ba
+palette = 4=#4589ff
+palette = 5=#c9a3f0
+palette = 6=#79c0ff
+palette = 7=#cdcecd
+palette = 8=#626463
+palette = 9=#ffa198
+palette = 10=#cae8ff
+palette = 11=#ffc1ba
+palette = 12=#78a9ff
+palette = 13=#d8bcf7
+palette = 14=#a5d6ff
+palette = 15=#ffffff
+background = 000000
+foreground = cdcecd
+cursor-color = 4589ff
+selection-background = 4589ff
+selection-foreground = cdcecd

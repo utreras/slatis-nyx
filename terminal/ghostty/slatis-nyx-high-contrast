@@ -1,0 +1,22 @@
+# Slatis Nyx High Contrast
+palette = 0=#6e7681
+palette = 1=#ff9492
+palette = 2=#4ae168
+palette = 3=#ffcf86
+palette = 4=#71b7ff
+palette = 5=#c9a3f0
+palette = 6=#91cbff
+palette = 7=#f0f3f6
+palette = 8=#bdc4cc
+palette = 9=#ffb1af
+palette = 10=#72f088
+palette = 11=#ffcf86
+palette = 12=#91cbff
+palette = 13=#d8bcf7
+palette = 14=#addcff
+palette = 15=#ffffff
+background = 000000
+foreground = f0f3f6
+cursor-color = 71b7ff
+selection-background = 71b7ff
+selection-foreground = f0f3f6

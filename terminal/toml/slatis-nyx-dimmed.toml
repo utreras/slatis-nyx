@@ -1,0 +1,32 @@
+# Slatis Nyx Dimmed
+[colors.primary]
+background = "#000000"
+foreground = "#adbac7"
+
+[colors.cursor]
+cursor = "#4589ff"
+text = "#000000"
+
+[colors.selection]
+background = "#4589ff"
+text = "#adbac7"
+
+[colors.normal]
+black = "#2c2e2d"
+red = "#e97871"
+green = "#42be65"
+yellow = "#f2c86c"
+blue = "#4589ff"
+magenta = "#c9a3f0"
+cyan = "#5ec8e5"
+white = "#adbac7"
+
+[colors.bright]
+black = "#636e7b"
+red = "#ff9e96"
+green = "#6fdc8c"
+yellow = "#f1c21b"
+blue = "#78a9ff"
+magenta = "#d8bcf7"
+cyan = "#91dbf2"
+white = "#cdd9e5"

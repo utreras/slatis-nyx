@@ -98,6 +98,7 @@
     ]
   },
   "scripts": {
-    "build": "node scripts/build-variant.js"
+    "build": "node scripts/build-variant.js",
+    "build:terminal": "node scripts/build-terminal.js"
   }
 }

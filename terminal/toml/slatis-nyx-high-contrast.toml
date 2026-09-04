@@ -1,0 +1,32 @@
+# Slatis Nyx High Contrast
+[colors.primary]
+background = "#000000"
+foreground = "#f0f3f6"
+
+[colors.cursor]
+cursor = "#71b7ff"
+text = "#000000"
+
+[colors.selection]
+background = "#71b7ff"
+text = "#f0f3f6"
+
+[colors.normal]
+black = "#6e7681"
+red = "#ff9492"
+green = "#4ae168"
+yellow = "#ffcf86"
+blue = "#71b7ff"
+magenta = "#c9a3f0"
+cyan = "#91cbff"
+white = "#f0f3f6"
+
+[colors.bright]
+black = "#bdc4cc"
+red = "#ffb1af"
+green = "#72f088"
+yellow = "#ffcf86"
+blue = "#91cbff"
+magenta = "#d8bcf7"
+cyan = "#addcff"
+white = "#ffffff"

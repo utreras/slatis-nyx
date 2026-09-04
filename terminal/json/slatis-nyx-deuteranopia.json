@@ -1,0 +1,23 @@
+{
+  "name": "Slatis Nyx Deuteranopia",
+  "background": "#000000",
+  "foreground": "#cdcecd",
+  "cursorColor": "#4589ff",
+  "selectionBackground": "#4589ff",
+  "black": "#2c2e2d",
+  "red": "#ec8e2c",
+  "green": "#a5d6ff",
+  "yellow": "#ffc981",
+  "blue": "#4589ff",
+  "magenta": "#c9a3f0",
+  "cyan": "#79c0ff",
+  "white": "#cdcecd",
+  "brightBlack": "#626463",
+  "brightRed": "#fdac54",
+  "brightGreen": "#cae8ff",
+  "brightYellow": "#ffc981",
+  "brightBlue": "#78a9ff",
+  "brightMagenta": "#d8bcf7",
+  "brightCyan": "#a5d6ff",
+  "brightWhite": "#ffffff"
+}

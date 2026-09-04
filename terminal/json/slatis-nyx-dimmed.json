@@ -1,0 +1,23 @@
+{
+  "name": "Slatis Nyx Dimmed",
+  "background": "#000000",
+  "foreground": "#adbac7",
+  "cursorColor": "#4589ff",
+  "selectionBackground": "#4589ff",
+  "black": "#2c2e2d",
+  "red": "#e97871",
+  "green": "#42be65",
+  "yellow": "#f2c86c",
+  "blue": "#4589ff",
+  "magenta": "#c9a3f0",
+  "cyan": "#5ec8e5",
+  "white": "#adbac7",
+  "brightBlack": "#636e7b",
+  "brightRed": "#ff9e96",
+  "brightGreen": "#6fdc8c",
+  "brightYellow": "#f1c21b",
+  "brightBlue": "#78a9ff",
+  "brightMagenta": "#d8bcf7",
+  "brightCyan": "#91dbf2",
+  "brightWhite": "#cdd9e5"
+}
