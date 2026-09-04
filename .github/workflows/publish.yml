@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The five derived variants and the terminal schemes are generated. If the
+      # source theme moved without a rebuild, the tag would ship stale files.
+      - name: Derived files are current
+        run: |
+          node scripts/build-variant.js
+          node scripts/build-terminal.js
+          git diff --exit-code -- themes terminal \
+            || (echo "::error::Derived files are stale. Run npm run build and commit." && exit 1)
+
+      - name: Package
+        run: npx --yes @vscode/vsce@latest package
+
+      - name: Visual Studio Marketplace
+        run: npx --yes @vscode/vsce@latest publish --packagePath *.vsix -p "$VSCE_PAT"
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: Open VSX
+        run: npx --yes ovsx publish *.vsix -p "$OVSX_PAT"
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+
+      - name: Attach to the release
+        run: gh release upload "${GITHUB_REF_NAME}" *.vsix --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}

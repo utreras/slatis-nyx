@@ -37,3 +37,28 @@ npx ovsx publish *.vsix -p $OVSX_TOKEN   # Open VSX
 `package.json` changes need `CachedProfilesData/<profile>/extensions.user.cache`
 deleted before VS Code will notice them locally. Theme colour edits only need a
 window reload.
+
+## Release
+
+Tagging is the whole release process:
+
+```bash
+npm version patch      # or minor / major
+git push --follow-tags
+```
+
+`.github/workflows/publish.yml` rebuilds the derived variants, fails when they
+differ from what is committed, packages, and publishes to both registries.
+
+Two repository secrets are required:
+
+| Secret | Where it comes from |
+|---|---|
+| `VSCE_PAT` | Azure DevOps personal access token, scope **Marketplace: Manage** |
+| `OVSX_PAT` | open-vsx.org profile → Access Tokens |
+
+The Open VSX namespace has to exist before the first publish:
+
+```bash
+npx ovsx create-namespace utreras -p $OVSX_PAT
+```
