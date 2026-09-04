@@ -1,5 +1,5 @@
 // Derives the Dimmed variant from the Classic theme. Chrome is shared verbatim;
-// only the syntax and graph layers are remapped, since the Primer scales are
+// only the syntax layer is remapped, since the Primer scales are
 // index-aligned: every Classic role has one Dimmed counterpart at the same step.
 const fs = require("node:fs");
 const path = require("node:path");
@@ -19,9 +19,6 @@ const CLASSIC_TO_DIMMED = {
   "#144620": "#1b4721", // diff added bg     green[8]
   "#c24e00": "#682d0f", // diff changed bg   orange[8]
   "#2f363d": "#22272e", // diff ignored fg   gray[9]
-  "#1158c7": "#316dca", // ref badge         blue[5]
-  "#6e40c9": "#8256d0", // remote badge      purple[5]
-  "#9b4215": "#ae5622", // base ref          orange[5]
 };
 
 
@@ -69,12 +66,6 @@ const out = {
     "editor.foreground": "#adbac7",
     "terminal.ansiWhite": "#adbac7",
     "terminal.ansiBrightWhite": "#cdd9e5",
-    // The graph borrows the syntax palette, so it has to follow the variant too.
-    ...Object.fromEntries(
-      Object.entries(base.colors)
-        .filter(([k]) => k.startsWith("scmGraph."))
-        .map(([k, v]) => [k, remap(dim(v))])
-    ),
   },
   semanticTokenColors: remap(base.semanticTokenColors),
   tokenColors: remap(base.tokenColors),

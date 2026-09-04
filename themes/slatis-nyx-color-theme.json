@@ -45,19 +45,19 @@
   "colors": {
 
     // ---- Source control graph ----
-    // Lanes reuse the syntax palette so the graph reads as the same language as
-    // the code. This trades away the colourblind-safety of VS Code's defaults:
-    // #f97583 and #85e89d are a red/green pair.
-    "scmGraph.foreground1": "#79b8ff",
-    "scmGraph.foreground2": "#b392f0",
-    "scmGraph.foreground3": "#f97583",
-    "scmGraph.foreground4": "#ffab70",
-    "scmGraph.foreground5": "#85e89d",
-    // Ref badges render the ref colour as the badge fill, so these sit deeper
-    // on the Primer scale than the lanes.
-    "scmGraph.historyItemRefColor": "#1158c7",
-    "scmGraph.historyItemRemoteRefColor": "#6e40c9",
-    "scmGraph.historyItemBaseRefColor": "#9b4215",
+    // Lanes are the IBM Design Language colourblind-safe five. These are
+    // signage, not typography: syntax colours are desaturated for long reading
+    // and go pale as 2px strokes. Shared by both variants — the graph is chrome.
+    "scmGraph.foreground1": "#648fff",
+    "scmGraph.foreground2": "#785ef0",
+    "scmGraph.foreground3": "#dc267f",
+    "scmGraph.foreground4": "#fe6100",
+    "scmGraph.foreground5": "#ffb000",
+    // Ref badges render the ref colour as the badge fill, so these sit on the
+    // Carbon 60 step rather than the saturated lane step.
+    "scmGraph.historyItemRefColor": "#0f62fe",
+    "scmGraph.historyItemRemoteRefColor": "#6929c4",
+    "scmGraph.historyItemBaseRefColor": "#ba4e00",
     "scmGraph.historyItemHoverLabelForeground": "#cdcecd",
     "scmGraph.historyItemHoverDefaultLabelBackground": "#202221",
     "scmGraph.historyItemHoverDefaultLabelForeground": "#cdcecd",
