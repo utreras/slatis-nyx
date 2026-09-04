@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/utreras/slatis-nyx/raw/HEAD/media/SlatisNyx_Repo.png" alt="Slatis Nyx" width="420" /><br/>
+  <img src="https://github.com/utreras/slatis-nyx/raw/HEAD/media/SlatisNyx_Repo.png" alt="Slatis Nyx" width="210" /><br/>
   <h3>Six dark variants, three of them built for colour vision deficiency</h3>
   <p>Blacked-out theme for Visual Studio Code, Cursor and Windsurf<br>
   maintained by <a href="https://github.com/utreras">@utreras</a></p>
