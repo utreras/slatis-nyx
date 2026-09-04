@@ -1,10 +1,11 @@
 {
   "name": "slatis-nyx",
   "displayName": "Slatis Nyx",
-  "description": "A gift from Slatis to the engineers who work while the world sleeps. Nyx was the goddess of night, and night was never the absence of something. Darkness you choose, not darkness you endure.",
+  "description": "A gift from Slatis engineers to the engineers who work while the world sleeps. Nyx was the goddess of night, and night was never the absence of something.",
   "version": "0.1.0",
   "publisher": "utreras",
   "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -13,21 +14,54 @@
   ],
   "keywords": [
     "theme",
+    "color theme",
+    "dark theme",
     "dark",
     "black",
-    "slatis",
-    "semantic",
+    "deep black",
+    "pure black",
+    "amoled",
+    "oled",
+    "midnight",
+    "night",
+    "monochrome",
+    "grayscale",
+    "minimal",
+    "github",
+    "github dark",
+    "dimmed",
+    "high contrast",
+    "contrast",
     "accessibility",
+    "a11y",
     "colorblind",
-    "high contrast"
+    "color blind",
+    "daltonism",
+    "deuteranopia",
+    "protanopia",
+    "tritanopia",
+    "semantic highlighting",
+    "syntax",
+    "slatis"
   ],
   "galleryBanner": {
     "color": "#000000",
     "theme": "dark"
   },
+  "pricing": "Free",
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/utreras/slatis-nyx"
+  },
+  "homepage": "https://github.com/utreras/slatis-nyx#readme",
+  "bugs": {
+    "url": "https://github.com/utreras/slatis-nyx/issues"
   },
   "contributes": {
     "themes": [

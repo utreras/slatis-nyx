@@ -1,12 +1,27 @@
-# Slatis Nyx
+<div align="center">
+  <img src="https://github.com/utreras/slatis-nyx/raw/HEAD/media/SlatisNyx_Repo.png" alt="Slatis Nyx" width="420" /><br/>
+  <h3>Six dark variants, three of them built for colour vision deficiency</h3>
+  <p>Blacked-out theme for Visual Studio Code, Cursor and Windsurf<br>
+  maintained by <a href="https://github.com/utreras">@utreras</a></p>
+  <p>
+    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://vsmarketplacebadges.dev/version-short/utreras.slatis-nyx.svg?style=flat&color=4589FF&label=marketplace" alt="Marketplace"/></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://vsmarketplacebadges.dev/installs-short/utreras.slatis-nyx.svg?style=flat&color=4589FF&label=installs" alt="Installs"/></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://vsmarketplacebadges.dev/rating-short/utreras.slatis-nyx.svg?style=flat&color=4589FF&label=rating" alt="Rating"/></a>&nbsp;
+    <a href="https://open-vsx.org/extension/utreras/slatis-nyx"><img src="https://img.shields.io/open-vsx/v/utreras/slatis-nyx?style=flat&color=4589FF&label=open%20vsx" alt="Open VSX"/></a>&nbsp;
+    <img src="https://img.shields.io/badge/variants-6-4589FF?style=flat" alt="6 variants"/>&nbsp;
+    <img src="https://img.shields.io/badge/colour%20keys-469-64748B?style=flat" alt="469 colour keys"/>&nbsp;
+    <img src="https://img.shields.io/badge/a11y-deuteranopia%20%7C%20tritanopia%20%7C%20mono-22C55E?style=flat" alt="accessibility variants"/>&nbsp;
+    <img src="https://img.shields.io/badge/license-MIT-22C55E?style=flat" alt="MIT"/>
+  </p>
+</div>
+
+---
 
 > A gift from Slatis to the engineers who work while the world sleeps.
 >
 > Nyx was the goddess of night, and in every telling, night is not the absence
 > of something. It is its own thing, first-born, with its own weather. The room
 > gets quiet, the meetings stop, and what is left is you and the problem(s).
-
-Blacked-out dark theme for Visual Studio Code / Cursor / Windsurf (now Devin)
 
 Six variants, 469 colour keys each. Half of them exist for developers whose eyes
 resolve colour differently.
@@ -143,23 +158,28 @@ desktop stays hidden.
 
 ## Install
 
-Reload the window and pick a variant from the theme picker.
+Search `Slatis Nyx` in the Extensions view and install it. Then press
+`Cmd+K Cmd+T` (`Ctrl+K Ctrl+T` on Windows and Linux) and pick a variant.
 
-## Build
+From a terminal:
 
-The five derived variants come out of the source theme:
-
+```bash
+code --install-extension utreras.slatis-nyx       # Visual Studio Code
+cursor --install-extension utreras.slatis-nyx     # Cursor
+windsurf --install-extension utreras.slatis-nyx   # Windsurf
+codium --install-extension utreras.slatis-nyx     # VSCodium
 ```
-npm run build
-```
 
-Edit `themes/slatis-nyx-color-theme.json`, run the build, and the other five
-follow. The script checks for leaked colours, greyscale purity in Mono, and
-role separability in the accessibility variants before it writes anything.
+Published to both registries, so every VS Code-compatible editor can reach it:
 
-## Publish
+| Editor | Pulls from |
+|---|---|
+| Visual Studio Code | [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx) |
+| Cursor | [Open VSX](https://open-vsx.org/extension/utreras/slatis-nyx) |
+| Windsurf | [Open VSX](https://open-vsx.org/extension/utreras/slatis-nyx) |
+| VSCodium, Gitpod, code-server, Eclipse Theia | [Open VSX](https://open-vsx.org/extension/utreras/slatis-nyx) |
 
-```
-npx @vscode/vsce package
-npx @vscode/vsce publish
-```
+Editors that ship their own registry mirror Open VSX, so one publish there
+covers all of them. Grabbing the `.vsix` from either page and running
+**Extensions: Install from VSIX** works everywhere as a fallback.
+
