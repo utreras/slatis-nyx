@@ -104,30 +104,28 @@ const GRAY_RAMP = ["#cdd9e5","#adbac7","#909dab","#768390","#636e7b","#545d68","
 
 const KEEP_COLOUR = [(k) => k.startsWith("terminal"), (k) => k.startsWith("symbolIcon.")];
 
-// State signals collapse onto the same grey when matched by luminance alone
-// (#4589ff modified and #fa4d56 deleted differ by 0.001), so they are placed by
-// hand. In greyscale the only axis left is value: brighter means louder.
+// Danger keeps its colour. Greyscale can rank things by value, but it cannot
+// make one of them mean "stop" — and a missed error costs more than a break in
+// the palette. Everything matching these names, plus the merge-conflict panes,
+// passes through with its Dimmed colour intact.
+const KEEP_SIGNAL = (k) => /error|warning|conflict|offline|breakpoint/i.test(k) || k.startsWith("merge.");
+
+// The remaining state signals do collapse under a luminance match (#4589ff
+// modified and #fa4d56 deleted differ by 0.001), so they are placed by hand.
+// In greyscale the only axis left is value: brighter means louder.
 const STATE_GRAY = {
-  "editorError.foreground": "#cdd9e5",
-  "problemsErrorIcon.foreground": "#cdd9e5",
-  "errorForeground": "#cdd9e5",
-  "list.errorForeground": "#cdd9e5",
-  "notificationsErrorIcon.foreground": "#cdd9e5",
-  "editorWarning.foreground": "#adbac7",
-  "problemsWarningIcon.foreground": "#adbac7",
-  "list.warningForeground": "#adbac7",
-  "notificationsWarningIcon.foreground": "#adbac7",
   "gitDecoration.addedResourceForeground": "#adbac7",
   "gitDecoration.untrackedResourceForeground": "#adbac7",
   "editorGutter.addedBackground": "#adbac7",
   "minimapGutter.addedBackground": "#adbac7",
+  "chat.linesAddedForeground": "#adbac7",
   "gitDecoration.modifiedResourceForeground": "#909dab",
   "editorGutter.modifiedBackground": "#909dab",
   "minimapGutter.modifiedBackground": "#909dab",
   "gitDecoration.deletedResourceForeground": "#636e7b",
   "editorGutter.deletedBackground": "#636e7b",
   "minimapGutter.deletedBackground": "#636e7b",
-  "gitDecoration.conflictingResourceForeground": "#768390",
+  "chat.linesRemovedForeground": "#636e7b",
 };
 
 const srgb = (c) => { const x = c / 255; return x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4; };
@@ -147,7 +145,7 @@ const nearestGray = (hex) => {
 function toMono(dimmed) {
   const colors = {};
   for (const [k, v] of Object.entries(dimmed.colors)) {
-    if (KEEP_COLOUR.some((f) => f(k))) { colors[k] = v; continue; }
+    if (KEEP_COLOUR.some((f) => f(k)) || KEEP_SIGNAL(k)) { colors[k] = v; continue; }
     if (STATE_GRAY[k]) { colors[k] = STATE_GRAY[k] + (/^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})$/.exec(v)?.[1] ?? ""); continue; }
     const m = /^(#[0-9a-fA-F]{6})([0-9a-fA-F]{2})?$/.exec(v);
     // A near-neutral value is already on the greyscale ladder; leave it exactly
@@ -168,7 +166,7 @@ console.log("wrote", path.relative(process.cwd(), monoDest), "-", Object.keys(mo
 // chroma), so a plain chroma threshold would flag the greys we just applied.
 const onRamp = new Set(GRAY_RAMP);
 const stray = Object.entries(mono.colors).filter(([k, v]) => {
-  if (KEEP_COLOUR.some((f) => f(k))) return false;
+  if (KEEP_COLOUR.some((f) => f(k)) || KEEP_SIGNAL(k)) return false;
   const m = /^(#[0-9a-fA-F]{6})/.exec(v);
   if (!m) return false;
   const base = m[1].toLowerCase();
@@ -176,3 +174,4 @@ const stray = Object.entries(mono.colors).filter(([k, v]) => {
 });
 if (stray.length) throw new Error("chroma left in mono chrome: " + stray.slice(0, 5).map(([k, v]) => k + "=" + v).join(", "));
 console.log("check ok - mono chrome is greyscale, syntax and terminal keep their colour");
+console.log("  colour kept on", Object.keys(mono.colors).filter(KEEP_SIGNAL).length, "risk-signal keys");
