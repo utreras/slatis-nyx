@@ -37,6 +37,11 @@
         "label": "Slatis Nyx Dimmed",
         "uiTheme": "vs-dark",
         "path": "./themes/slatis-nyx-dimmed-color-theme.json"
+      },
+      {
+        "label": "Slatis Nyx Mono",
+        "uiTheme": "vs-dark",
+        "path": "./themes/slatis-nyx-mono-color-theme.json"
       }
     ]
   },
