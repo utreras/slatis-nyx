@@ -34,9 +34,9 @@
         "path": "./themes/slatis-nyx-color-theme.json"
       },
       {
-        "label": "Slatis Nyx Vivid",
+        "label": "Slatis Nyx Dimmed",
         "uiTheme": "vs-dark",
-        "path": "./themes/slatis-nyx-vivid-color-theme.json"
+        "path": "./themes/slatis-nyx-dimmed-color-theme.json"
       }
     ]
   },
