@@ -45,18 +45,20 @@
   "colors": {
 
     // ---- Source control graph ----
-    // Five lanes, ordered so no two adjacent hues form a red/green pair and
-    // each step also separates by lightness — the graph stays readable in
-    // grayscale and for deuteranopia, which is why VS Code's defaults look
-    // off-palette in the first place.
-    "scmGraph.foreground1": "#4589ff",
-    "scmGraph.foreground2": "#c9a3f0",
-    "scmGraph.foreground3": "#e97871",
-    "scmGraph.foreground4": "#f2c86c",
-    "scmGraph.foreground5": "#91dbf2",
-    "scmGraph.historyItemRefColor": "#4589ff",
-    "scmGraph.historyItemRemoteRefColor": "#c9a3f0",
-    "scmGraph.historyItemBaseRefColor": "#f2c86c",
+    // Lanes are the IBM Design Language colorblind-safe five, unmodified.
+    // VS Code shipped two of them (#FFB000, #DC267F) and improvised the rest;
+    // this restores the set the palette was actually designed as. Do not
+    // "harmonise" these with the theme hues — the spacing is the whole point.
+    "scmGraph.foreground1": "#648fff",
+    "scmGraph.foreground2": "#785ef0",
+    "scmGraph.foreground3": "#dc267f",
+    "scmGraph.foreground4": "#fe6100",
+    "scmGraph.foreground5": "#ffb000",
+    // Ref badges render the ref colour as the badge fill, so these sit two
+    // steps deeper on the Carbon ramp than the lanes.
+    "scmGraph.historyItemRefColor": "#0f62fe",
+    "scmGraph.historyItemRemoteRefColor": "#6929c4",
+    "scmGraph.historyItemBaseRefColor": "#ba4e00",
     "scmGraph.historyItemHoverLabelForeground": "#cdcecd",
     "scmGraph.historyItemHoverDefaultLabelBackground": "#202221",
     "scmGraph.historyItemHoverDefaultLabelForeground": "#cdcecd",
