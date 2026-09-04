@@ -540,10 +540,13 @@
     "variable.readonly.defaultLibrary": "#79b8ff",
     "variable.defaultLibrary": "#79b8ff",
 
-    "property": "#79b8ff",
-    "property.readonly": "#79b8ff",
+    // Object literal keys are the most frequent token in config-shaped TS.
+    // Blue here stops reading as an accent and becomes the page colour, which
+    // is why GitHub leaves them at the base foreground.
+    "property": "#e1e4e8",
+    "property.readonly": "#e1e4e8",
+    "event": "#e1e4e8",
     "enumMember": "#79b8ff",
-    "event": "#79b8ff",
 
     "keyword": "#f97583",
     "modifier": "#f97583",
