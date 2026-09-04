@@ -147,6 +147,7 @@
     "sideBySideEditor.horizontalBorder": "#2c2e2d",
     "sideBySideEditor.verticalBorder": "#2c2e2d",
     "foreground": "#adbac7",
+    "icon.foreground": "#768390",
     "strongForeground": "#cdd9e5",
     "disabledForeground": "#545d68",
     "editor.background": "#0b0b0b",

@@ -233,6 +233,9 @@
     // Global text fallback. Anything the theme does not name explicitly lands
     // here — chat messages among them.
     "foreground": "#e1e4e8",
+    // Every workbench icon and toolbar label. Default is #c5c5c5, brighter than
+    // any neutral in this theme, which is why chat toolbars read as foreign.
+    "icon.foreground": "#8e8f8f",
     "strongForeground": "#f0f6fc",
     "disabledForeground": "#545d68",
 
