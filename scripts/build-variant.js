@@ -25,6 +25,23 @@ const CLASSIC_TO_DIMMED = {
 };
 
 
+// The chrome neutral ramp, moved onto Primer's dimmed grays so UI text never
+// sits brighter than the code it frames. Pure #ffffff is deliberately absent:
+// it only survives on saturated badge fills, where dimming it would drop the
+// label under 3:1 against the fill.
+const CHROME_TEXT = {
+  "#cdcecd": "#adbac7", // primary    gray[1]
+  "#8e8f8f": "#768390", // secondary  gray[3]
+  "#626463": "#636e7b", // tertiary   gray[4]
+  "#4a4c4b": "#545d68", // muted      gray[5]
+};
+
+const dim = (v) =>
+  typeof v === "string" ? CHROME_TEXT[v.toLowerCase()] ?? v
+  : Array.isArray(v) ? v.map(dim)
+  : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, dim(x)]))
+  : v;
+
 const remap = (v) =>
   typeof v === "string" ? CLASSIC_TO_DIMMED[v.toLowerCase()] ?? v
   : Array.isArray(v) ? v.map(remap)
@@ -39,8 +56,10 @@ const out = {
   ...base,
   name: "Slatis Nyx Dimmed",
   colors: {
-    ...base.colors,
+    ...dim(base.colors),
     "editor.foreground": "#adbac7",
+    "terminal.ansiWhite": "#adbac7",
+    "terminal.ansiBrightWhite": "#cdd9e5",
     // The graph borrows the syntax palette, so it has to follow the variant too.
     ...Object.fromEntries(
       Object.entries(base.colors)
@@ -57,7 +76,11 @@ fs.writeFileSync(dest, JSON.stringify(out, null, 2) + "\n");
 console.log("wrote", path.relative(process.cwd(), dest), "-", Object.keys(out.colors).length, "colors");
 
 // One runnable check: every classic syntax hex must be gone from the variant.
-const body = JSON.stringify({ s: out.semanticTokenColors, t: out.tokenColors });
-const leaked = Object.keys(CLASSIC_TO_DIMMED).filter((h) => body.toLowerCase().includes(h));
-if (leaked.length) throw new Error("unmapped classic colours leaked into variant: " + leaked.join(", "));
-console.log("check ok - no classic hexes left in the variant syntax layer");
+const syntax = JSON.stringify({ s: out.semanticTokenColors, t: out.tokenColors }).toLowerCase();
+const chrome = JSON.stringify(out.colors).toLowerCase();
+const leaked = [
+  ...Object.keys(CLASSIC_TO_DIMMED).filter((h) => syntax.includes(h)),
+  ...Object.keys(CHROME_TEXT).filter((h) => chrome.includes(h)),
+];
+if (leaked.length) throw new Error("undimmed colours leaked into the variant: " + leaked.join(", "));
+console.log("check ok - no classic syntax or chrome hexes left in the variant");
