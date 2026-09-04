@@ -186,7 +186,7 @@ MIT
 
 ---
 
-<div align="center">
-  <p>Built by the engineers at <a href="https://www.slatis.com">Slatis</a>, for the ones still typing at 3am.<br/>
+<div align="left">
+  <p>Built by <a href="https://www.slatis.com">Slatis</a> Team, for the ones still typing (or chatting) at 3am.<br/>
   <a href="https://www.slatis.com">www.slatis.com</a></p>
 </div>
