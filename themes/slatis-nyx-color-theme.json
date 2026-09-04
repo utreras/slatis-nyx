@@ -52,8 +52,12 @@
     "chat.requestEditor.background": "#0b0b0b",
     "chat.responseEditor.background": "#0b0b0b",
     "chat.requestBackground": "#0b0b0b",
-    "chat.requestBubbleBackground": "#ffffff08",
-    "chat.requestBubbleHoverBackground": "#ffffff10",
+    // Your own messages get a solid dark blue rather than a white alpha wash: a
+    // tint reads as "slightly lighter background", a fill reads as "someone
+    // said this". Deliberately outside both substitution maps, so it stays
+    // identical in Dimmed instead of washing out with the rest of the chrome.
+    "chat.requestBubbleBackground": "#0c2d6b",
+    "chat.requestBubbleHoverBackground": "#103a80",
     "chat.requestBorder": "#2c2e2d",
     "chat.requestCodeBorder": "#383a39",
     "chat.avatarBackground": "#202221",
@@ -385,7 +389,7 @@
     "dropdown.border": "#383a39",
     "dropdown.foreground": "#cdcecd",
 
-    "input.background": "#151616",
+    "input.background": "#0b0b0b",
     "input.border": "#383a39",
     "input.foreground": "#cdcecd",
     "input.placeholderForeground": "#626463",
