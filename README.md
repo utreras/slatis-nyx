@@ -176,7 +176,9 @@ Published to both registries, so every VS Code-compatible editor can reach it:
 | VSCodium, Gitpod, code-server, Eclipse Theia | [Open VSX](https://open-vsx.org/extension/utreras/slatis-nyx) |
 
 Editors that ship their own registry mirror Open VSX, so one publish there
-covers all of them. Grabbing the `.vsix` from either page and running
+covers all of them. [Zed](zed/) has its own port with all six variants, and
+[`terminal/`](terminal/) carries the palette to iTerm2, Ghostty, Alacritty,
+Kitty, Warp and Windows Terminal. Grabbing the `.vsix` from either page and running
 **Extensions: Install from VSIX** works everywhere as a fallback.
 
 

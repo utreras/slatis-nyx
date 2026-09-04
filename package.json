@@ -98,7 +98,9 @@
     ]
   },
   "scripts": {
-    "build": "node scripts/build-variant.js",
-    "build:terminal": "node scripts/build-terminal.js"
+    "build": "node scripts/build-variant.js && node scripts/build-terminal.js && node scripts/build-zed.js",
+    "build:themes": "node scripts/build-variant.js",
+    "build:terminal": "node scripts/build-terminal.js",
+    "build:zed": "node scripts/build-zed.js"
   }
 }

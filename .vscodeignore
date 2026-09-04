@@ -1,7 +1,9 @@
 .vscode/**
 .git/**
+.github/**
 .gitignore
 scripts/**
 terminal/**
+zed/**
 CONTRIBUTING.md
 *.vsix
