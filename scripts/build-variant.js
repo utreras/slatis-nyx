@@ -19,6 +19,9 @@ const CLASSIC_TO_MODERN = {
   "#144620": "#033a16", // diff added bg
   "#c24e00": "#5a1e02", // diff changed bg
   "#2f363d": "#161b22", // diff ignored fg
+  "#1158c7": "#1f6feb", // ref badge      blue[5]
+  "#6e40c9": "#8957e5", // remote badge   purple[5]
+  "#9b4215": "#bd561d", // base ref       orange[5]
 };
 
 const remap = (v) =>
@@ -34,7 +37,16 @@ const base = JSON.parse(src.replace(/^\s*\/\/.*$/gm, ""));
 const out = {
   ...base,
   name: "Slatis Nyx Vivid",
-  colors: { ...base.colors, "editor.foreground": "#e6edf3" },
+  colors: {
+    ...base.colors,
+    "editor.foreground": "#e6edf3",
+    // The graph borrows the syntax palette, so it has to follow the variant too.
+    ...Object.fromEntries(
+      Object.entries(base.colors)
+        .filter(([k]) => k.startsWith("scmGraph."))
+        .map(([k, v]) => [k, remap(v)])
+    ),
+  },
   semanticTokenColors: remap(base.semanticTokenColors),
   tokenColors: remap(base.tokenColors),
 };
