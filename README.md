@@ -1,8 +1,7 @@
 <div align="center">
   <img src="media/SlatisNyx_Repo.png" alt="Slatis Nyx" width="210" /><br/>
   <h3>Six dark variants, three of them built for colour vision deficiency</h3>
-  <p>GitHub Dark syntax on a true-black interface, verified so no two syntax roles ever read as the same colour<br>
-  maintained by <a href="https://github.com/utreras">@utreras</a></p>
+  <p>Mantained by <a href="https://github.com/utreras">@utreras</a></p>
   <p>
     <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://img.shields.io/badge/marketplace-Slatis%20Nyx-4589FF?style=flat&logo=visualstudiocode&logoColor=white" alt="VS Code Marketplace"/></a>&nbsp;
     <a href="https://open-vsx.org/extension/utreras/slatis-nyx"><img src="https://img.shields.io/badge/open%20vsx-Slatis%20Nyx-4589FF?style=flat&logo=eclipseide&logoColor=white" alt="Open VSX"/></a>&nbsp;
@@ -16,7 +15,7 @@
 
 ---
 
-> A gift from Slatis to the engineers who work while the world sleeps.
+> A gift from Slatis engineers to other engineers who work while everyone sleeps.
 >
 > Nyx was the goddess of night, and in every telling, night is not the absence
 > of something. It is its own thing, first-born, with its own weather. The room
@@ -24,8 +23,7 @@
 
 ## Why?
 
-Dark themes get built for the person who can see all of them. Around 1 in 12 men
-and 1 in 200 women have some form of colour vision deficiency, and syntax
+Around 1 in 12 men & 1 in 200 women have some form of colour vision deficiency, and syntax
 highlighting asks them to pull meaning out of hue for eight hours a day. Most
 themes hand them two roles painted the same colour and ship it.
 
@@ -35,9 +33,9 @@ build refuses to finish when two syntax roles could read as the same colour.
 
 ## Features
 
-- **Blue stays out of the syntax.** Functions render purple `#c9a3f0`, so the
-  interface accent and the code never share a hue. Chrome recedes, code carries.
-- **Borders you can actually see.** Two bands with one rule: `#2c2e2d` for
+- Functions render purple `#c9a3f0`, so the
+  interface accent and the code never share a hue.
+- **Borders:** Two bands with one rule: `#2c2e2d` for
   surfaces that sit inside the layout, `#383a39` for surfaces that float over
   content.
 - **Semantic highlighting, on.** 39 rules keyed off the language server, so
@@ -61,8 +59,7 @@ build refuses to finish when two syntax roles could read as the same colour.
 
 ## Built for colour vision deficiency
 
-Around 1 in 12 men and 1 in 200 women have some form of colour vision
-deficiency. Syntax highlighting asks them to pull meaning out of hue for eight
+Syntax highlighting asks them to pull meaning out of hue for eight
 hours a day, and most themes hand them two roles painted the same colour.
 
 Three variants target a specific deficiency, and a fourth removes the question
@@ -80,7 +77,7 @@ paints it. What moves is the syntax palette, the git and diff signals, the 16
 terminal ANSI colours and the source control graph lanes, which is everywhere
 colour carries meaning rather than identity.
 
-### Every palette is measured before it ships
+### Every palette was measured
 
 Every variant is generated from one source theme by `scripts/build-variant.js`,
 and the build refuses to finish when two of the ten syntax roles could read as
@@ -96,14 +93,6 @@ Hue remapping on its own leaves pairs that match in both hue and value.
 Measuring all 45 pairs in each variant surfaced `entity` and `tag` sitting
 0.001 apart in luminance and 61 degrees apart in hue, which lands as a single
 colour for a deuteranope. The palettes moved until the check passed.
-
-### Upstream collisions, repaired
-
-These variants build on the palettes in `@primer/primitives`. In
-`dark_colorblind` the `green` and `blue` scales are byte-identical, and in
-`dark_tritanopia` so are `orange` and `red`. A direct port drops
-`entity.name.tag` and `string` on the same hex. Each variant re-slots the
-affected role onto a different step of the surviving hue.
 
 ### Colour works alongside other channels
 
@@ -190,3 +179,14 @@ Editors that ship their own registry mirror Open VSX, so one publish there
 covers all of them. Grabbing the `.vsix` from either page and running
 **Extensions: Install from VSIX** works everywhere as a fallback.
 
+
+## License
+
+MIT
+
+---
+
+<div align="center">
+  <p>Built by the engineers at <a href="https://www.slatis.com">Slatis</a>, for the ones still typing at 3am.<br/>
+  <a href="https://www.slatis.com">www.slatis.com</a></p>
+</div>
