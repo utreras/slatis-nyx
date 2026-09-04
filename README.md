@@ -57,3 +57,59 @@ The folder already sits in `~/.vscode/extensions/`. Reload the window and pick
 npx @vscode/vsce package
 npx @vscode/vsce publish
 ```
+
+## Accessibility
+
+Six variants. The three below are derived from the same Classic source through
+`scripts/build-variant.js`, using the palettes published in `@primer/primitives`.
+
+| Variant | For | What moves |
+|---|---|---|
+| Deuteranopia | red-green deficiency (deuteranopia, protanopia) | green becomes blue, red becomes amber. The red/green axis becomes amber/blue. |
+| Tritanopia | blue-yellow deficiency | green becomes blue, orange becomes red. The axis becomes red/blue. |
+| High Contrast | low vision | every hue brightened, borders raised, and `uiTheme: hc-black` so VS Code draws its own contrast borders on every widget. |
+| Mono | any colour vision deficiency, including achromatopsia | greyscale chrome; colour survives only in syntax, terminal, and 41 risk-signal keys. |
+
+### Two things these do that the upstream palettes do not
+
+**Role collisions are fixed.** In `dark_colorblind` the `green` and `blue`
+scales are byte-identical, and in `dark_tritanopia` so are `orange` and `red`.
+A literal port puts `entity.name.tag` and `string` on the same hex. Each variant
+re-slots the affected role onto a different step of the surviving hue.
+
+**Separation is enforced, not assumed.** The build fails if any two of the ten
+syntax roles are indistinguishable. Two roles pass if *any* of three channels
+carries the difference: a luminance gap of 0.03, a hue gap of 70 degrees, or one
+of them being near-neutral. Remapping hue alone — which is all the upstream
+palettes do — leaves pairs that match in both hue and value.
+
+**Colour is not the only channel.** Read-only symbols are bold in every
+accessibility variant, so a constant stays identifiable with hue removed
+entirely. Deprecated symbols are struck through in all six.
+
+### What a theme cannot fix
+
+These are settings, not colours. A theme has no access to them:
+
+```jsonc
+{
+  // Force a minimum contrast ratio in the terminal, overriding program colours
+  "terminal.integrated.minimumContrastRatio": 4.5,
+
+  // Heavier glyphs help far more than brighter ones for low vision
+  "editor.fontWeight": "500",
+  "workbench.fontAliasing": "antialiased",
+
+  // A wider caret is easier to track
+  "editor.cursorWidth": 3,
+  "editor.cursorBlinking": "solid",
+
+  // Audio and announcement cues, independent of any visual signal
+  "accessibility.signals.lineHasError": { "sound": "on" },
+  "accessibility.signals.lineHasWarning": { "sound": "on" },
+
+  // Structure without relying on colour
+  "editor.guides.bracketPairs": "active",
+  "editor.renderWhitespace": "boundary"
+}
+```

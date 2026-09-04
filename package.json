@@ -16,7 +16,10 @@
     "dark",
     "black",
     "slatis",
-    "semantic"
+    "semantic",
+    "accessibility",
+    "colorblind",
+    "high contrast"
   ],
   "galleryBanner": {
     "color": "#000000",
@@ -42,6 +45,21 @@
         "label": "Slatis Nyx Mono",
         "uiTheme": "vs-dark",
         "path": "./themes/slatis-nyx-mono-color-theme.json"
+      },
+      {
+        "label": "Slatis Nyx Deuteranopia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/slatis-nyx-deuteranopia-color-theme.json"
+      },
+      {
+        "label": "Slatis Nyx Tritanopia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/slatis-nyx-tritanopia-color-theme.json"
+      },
+      {
+        "label": "Slatis Nyx High Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/slatis-nyx-high-contrast-color-theme.json"
       }
     ]
   },
