@@ -66,6 +66,12 @@ const out = {
     "editor.foreground": "#adbac7",
     "terminal.ansiWhite": "#adbac7",
     "terminal.ansiBrightWhite": "#cdd9e5",
+    // Symbol icons mirror the syntax roles, so they follow the variant.
+    ...Object.fromEntries(
+      Object.entries(base.colors)
+        .filter(([k]) => k.startsWith("symbolIcon."))
+        .map(([k, v]) => [k, remap(dim(v))])
+    ),
   },
   semanticTokenColors: remap(base.semanticTokenColors),
   tokenColors: remap(base.tokenColors),

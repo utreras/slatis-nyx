@@ -44,6 +44,66 @@
 
   "colors": {
 
+    // ---- Suggest widget / outline symbol icons ----
+    // These mirror the syntax roles: the icon next to an identifier should say
+    // the same thing its colour in the editor says.
+    "symbolIcon.classForeground": "#b392f0",
+    "symbolIcon.structForeground": "#b392f0",
+    "symbolIcon.enumeratorForeground": "#b392f0",
+    "symbolIcon.functionForeground": "#b392f0",
+    "symbolIcon.methodForeground": "#b392f0",
+    "symbolIcon.constructorForeground": "#b392f0",
+    "symbolIcon.interfaceForeground": "#79b8ff",
+    "symbolIcon.typeParameterForeground": "#79b8ff",
+    "symbolIcon.moduleForeground": "#79b8ff",
+    "symbolIcon.namespaceForeground": "#79b8ff",
+    "symbolIcon.packageForeground": "#79b8ff",
+    "symbolIcon.constantForeground": "#79b8ff",
+    "symbolIcon.enumeratorMemberForeground": "#79b8ff",
+    "symbolIcon.numberForeground": "#79b8ff",
+    "symbolIcon.booleanForeground": "#79b8ff",
+    "symbolIcon.keyForeground": "#79b8ff",
+    "symbolIcon.referenceForeground": "#79b8ff",
+    "symbolIcon.keywordForeground": "#f97583",
+    "symbolIcon.operatorForeground": "#f97583",
+    "symbolIcon.nullForeground": "#f97583",
+    "symbolIcon.stringForeground": "#9ecbff",
+    "symbolIcon.snippetForeground": "#85e89d",
+    "symbolIcon.arrayForeground": "#ffab70",
+    "symbolIcon.objectForeground": "#ffab70",
+    "symbolIcon.eventForeground": "#ffab70",
+    "symbolIcon.unitForeground": "#ffab70",
+    "symbolIcon.colorForeground": "#ffab70",
+    "symbolIcon.variableForeground": "#e1e4e8",
+    "symbolIcon.fieldForeground": "#e1e4e8",
+    "symbolIcon.propertyForeground": "#e1e4e8",
+    "symbolIcon.textForeground": "#e1e4e8",
+    "symbolIcon.fileForeground": "#8e8f8f",
+    "symbolIcon.folderForeground": "#8e8f8f",
+
+    // ---- Terminal, beyond the ANSI 16 ----
+    "terminal.findMatchBackground": "#4589ff40",
+    "terminal.findMatchBorder": "#4589ff",
+    "terminal.findMatchHighlightBackground": "#4589ff25",
+    "terminal.findMatchHighlightBorder": "#4589ff50",
+    "terminal.hoverHighlightBackground": "#ffffff10",
+    "terminal.inactiveSelectionBackground": "#4589ff18",
+    "terminal.dropBackground": "#4589ff20",
+    "terminal.initialHintForeground": "#626463",
+    "terminal.tab.activeBorder": "#4589ff",
+    "terminalOverviewRuler.border": "#00000000",
+    "terminalOverviewRuler.cursorForeground": "#4589ff",
+    "terminalOverviewRuler.findMatchForeground": "#4589ffb0",
+    "terminalCommandGuide.foreground": "#383a39",
+    // Shell integration dots next to each prompt: grey pending, green ok, red failed.
+    "terminalCommandDecoration.defaultBackground": "#8e8f8f",
+    "terminalCommandDecoration.successBackground": "#42be65",
+    "terminalCommandDecoration.errorBackground": "#fa4d56",
+    "terminalStickyScroll.background": "#000000e6",
+    "terminalStickyScroll.border": "#2c2e2d",
+    "terminalStickyScrollHover.background": "#202221e6",
+
+
     // ---- Source control graph ----
     // Lanes are the IBM Design Language colourblind-safe five. These are
     // signage, not typography: syntax colours are desaturated for long reading
