@@ -61,7 +61,7 @@ const remapDimmed = substitute(CLASSIC_TO_DIMMED);
 // surviving hue, keeping every syntax role distinct by value.
 const ACCESSIBLE = [
   {
-    name: "Slatis Nyx Deuteranopia",
+    name: "Slatis Nyx (Deuteranopia)",
     file: "slatis-nyx-deuteranopia-color-theme.json",
     lanes: ["#648fff", "#785ef0", "#dc267f", "#d47616", "#ffb000"],
     refs: ["#0f62fe", "#6929c4", "#914d04"],
@@ -80,7 +80,7 @@ const ACCESSIBLE = [
     },
   },
   {
-    name: "Slatis Nyx Tritanopia",
+    name: "Slatis Nyx (Tritanopia)",
     file: "slatis-nyx-tritanopia-color-theme.json",
     lanes: ["#58a6ff", "#ff7b72", "#a5d6ff", "#b62324", "#c9d1d9"],
     refs: ["#0f62fe", "#6929c4", "#b62324"],
@@ -99,7 +99,7 @@ const ACCESSIBLE = [
     },
   },
   {
-    name: "Slatis Nyx High Contrast",
+    name: "Slatis Nyx (High Contrast)",
     file: "slatis-nyx-high-contrast-color-theme.json",
     lanes: ["#71b7ff", "#cb9eff", "#ff6a69", "#fe9a2d", "#4ae168"],
     refs: ["#1e60d5", "#8957e5", "#bf5e0a"],
@@ -163,7 +163,7 @@ const write = (file, theme) => {
 
 const dimmed = {
   ...base,
-  name: "Slatis Nyx Dimmed",
+  name: "Slatis Nyx (Dimmed)",
   colors: {
     ...dim(base.colors),
     "editor.foreground": "#adbac7",
@@ -187,7 +187,7 @@ const mono = (() => {
     if (!m || chroma(m[1]) < 12) { colors[k] = v; continue; }
     colors[k] = nearestGray(m[1].toLowerCase()) + (m[2] ?? "");
   }
-  return { ...dimmed, name: "Slatis Nyx Mono", colors };
+  return { ...dimmed, name: "Slatis Nyx (Mono)", colors };
 })();
 write("slatis-nyx-mono-color-theme.json", mono);
 

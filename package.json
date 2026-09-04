@@ -37,27 +37,27 @@
         "path": "./themes/slatis-nyx-color-theme.json"
       },
       {
-        "label": "Slatis Nyx Dimmed",
+        "label": "Slatis Nyx (Dimmed)",
         "uiTheme": "vs-dark",
         "path": "./themes/slatis-nyx-dimmed-color-theme.json"
       },
       {
-        "label": "Slatis Nyx Mono",
+        "label": "Slatis Nyx (Mono)",
         "uiTheme": "vs-dark",
         "path": "./themes/slatis-nyx-mono-color-theme.json"
       },
       {
-        "label": "Slatis Nyx Deuteranopia",
+        "label": "Slatis Nyx (Deuteranopia)",
         "uiTheme": "vs-dark",
         "path": "./themes/slatis-nyx-deuteranopia-color-theme.json"
       },
       {
-        "label": "Slatis Nyx Tritanopia",
+        "label": "Slatis Nyx (Tritanopia)",
         "uiTheme": "vs-dark",
         "path": "./themes/slatis-nyx-tritanopia-color-theme.json"
       },
       {
-        "label": "Slatis Nyx High Contrast",
+        "label": "Slatis Nyx (High Contrast)",
         "uiTheme": "hc-black",
         "path": "./themes/slatis-nyx-high-contrast-color-theme.json"
       }
