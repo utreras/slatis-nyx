@@ -1,16 +1,15 @@
 <div align="center">
-  <img src="https://github.com/utreras/slatis-nyx/raw/HEAD/media/SlatisNyx_Repo.png" alt="Slatis Nyx" width="210" /><br/>
+  <img src="media/SlatisNyx_Repo.png" alt="Slatis Nyx" width="210" /><br/>
   <h3>Six dark variants, three of them built for colour vision deficiency</h3>
-  <p>Blacked-out theme for Visual Studio Code, Cursor and Windsurf<br>
+  <p>GitHub Dark syntax on a true-black interface, verified so no two syntax roles ever read as the same colour<br>
   maintained by <a href="https://github.com/utreras">@utreras</a></p>
   <p>
-    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://vsmarketplacebadges.dev/version-short/utreras.slatis-nyx.svg?style=flat&color=4589FF&label=marketplace" alt="Marketplace"/></a>&nbsp;
-    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://vsmarketplacebadges.dev/installs-short/utreras.slatis-nyx.svg?style=flat&color=4589FF&label=installs" alt="Installs"/></a>&nbsp;
-    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://vsmarketplacebadges.dev/rating-short/utreras.slatis-nyx.svg?style=flat&color=4589FF&label=rating" alt="Rating"/></a>&nbsp;
-    <a href="https://open-vsx.org/extension/utreras/slatis-nyx"><img src="https://img.shields.io/open-vsx/v/utreras/slatis-nyx?style=flat&color=4589FF&label=open%20vsx" alt="Open VSX"/></a>&nbsp;
-    <img src="https://img.shields.io/badge/variants-6-4589FF?style=flat" alt="6 variants"/>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=utreras.slatis-nyx"><img src="https://img.shields.io/badge/marketplace-Slatis%20Nyx-4589FF?style=flat&logo=visualstudiocode&logoColor=white" alt="VS Code Marketplace"/></a>&nbsp;
+    <a href="https://open-vsx.org/extension/utreras/slatis-nyx"><img src="https://img.shields.io/badge/open%20vsx-Slatis%20Nyx-4589FF?style=flat&logo=eclipseide&logoColor=white" alt="Open VSX"/></a>&nbsp;
+    <img src="https://img.shields.io/badge/VS%20Code-%5E1.70-4589FF?style=flat" alt="VS Code ^1.70"/>&nbsp;
+    <img src="https://img.shields.io/badge/variants-6-64748B?style=flat" alt="6 variants"/>&nbsp;
     <img src="https://img.shields.io/badge/colour%20keys-469-64748B?style=flat" alt="469 colour keys"/>&nbsp;
-    <img src="https://img.shields.io/badge/a11y-deuteranopia%20%7C%20tritanopia%20%7C%20mono-22C55E?style=flat" alt="accessibility variants"/>&nbsp;
+    <img src="https://img.shields.io/badge/a11y-colourblind%20safe-22C55E?style=flat" alt="colourblind safe"/>&nbsp;
     <img src="https://img.shields.io/badge/license-MIT-22C55E?style=flat" alt="MIT"/>
   </p>
 </div>
@@ -23,8 +22,16 @@
 > of something. It is its own thing, first-born, with its own weather. The room
 > gets quiet, the meetings stop, and what is left is you and the problem(s).
 
-Six variants, 469 colour keys each. Half of them exist for developers whose eyes
-resolve colour differently.
+## Why?
+
+Dark themes get built for the person who can see all of them. Around 1 in 12 men
+and 1 in 200 women have some form of colour vision deficiency, and syntax
+highlighting asks them to pull meaning out of hue for eight hours a day. Most
+themes hand them two roles painted the same colour and ship it.
+
+Slatis Nyx generates six variants from one source palette. Three target a
+specific deficiency, one drops colour out of the interface completely, and the
+build refuses to finish when two syntax roles could read as the same colour.
 
 ## Features
 
