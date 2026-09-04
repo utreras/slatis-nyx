@@ -92,7 +92,7 @@
     "sideBarStickyScroll.background": "#000000e6",
     "sideBarStickyScroll.border": "#2c2e2d",
     "sideBarStickyScroll.shadow": "#000000a0",
-    "panelStickyScroll.background": "#0b0b0be6",
+    "panelStickyScroll.background": "#000000e6",
     "panelStickyScroll.border": "#2c2e2d",
     "panelStickyScroll.shadow": "#000000a0",
     "panelStickyScrollHover.background": "#202221e6",
@@ -283,13 +283,17 @@
     "inputValidation.infoBorder": "#4589ff",
     "inputValidation.infoBackground": "#0f1c2e",
 
-    "button.background": "#0f62fe",
-    "button.foreground": "#ffffff",
-    "button.hoverBackground": "#4589ff",
-    "button.border": "#00000000",
-    "button.secondaryBackground": "#202221",
-    "button.secondaryForeground": "#cdcecd",
-    "button.secondaryHoverBackground": "#2c2e2d",
+    // Buttons are neutral slabs. Blue is a pointer, not a shout: it survives in
+    // the focus ring and the icon, so the primary action still reads first
+    // without a saturated field competing with the editor.
+    "button.background": "#202221",
+    "button.foreground": "#cdcecd",
+    "button.hoverBackground": "#2c2e2d",
+    "button.border": "#383a39",
+    "button.separator": "#ffffff20",
+    "button.secondaryBackground": "#151616",
+    "button.secondaryForeground": "#8e8f8f",
+    "button.secondaryHoverBackground": "#202221",
     "checkbox.background": "#151616",
     "checkbox.border": "#383a39",
 
@@ -357,7 +361,7 @@
     "statusBarItem.warningBackground": "#7a5c00",
     "statusBarItem.warningForeground": "#ffffff",
 
-    "panel.background": "#0b0b0b",
+    "panel.background": "#000000",
     "panel.border": "#2c2e2d",
     "panelTitle.activeBorder": "#4589ff",
     "panelTitle.activeForeground": "#cdcecd",
@@ -438,7 +442,7 @@
     "charts.lines": "#2c2e2d",
 
     // ---- Terminal (16 ANSI) ----
-    "terminal.background": "#0b0b0b",
+    "terminal.background": "#000000",
     "terminal.foreground": "#cdcecd",
     "terminal.border": "#2c2e2d",
     "terminalCursor.foreground": "#4589ff",
