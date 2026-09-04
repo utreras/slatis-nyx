@@ -58,7 +58,7 @@ paints it. What moves is the syntax palette, the git and diff signals, the 16
 terminal ANSI colours and the source control graph lanes, which is everywhere
 colour carries meaning rather than identity.
 
-### The palettes are verified, not eyeballed
+### Every palette is measured before it ships
 
 Every variant is generated from one source theme by `scripts/build-variant.js`,
 and the build refuses to finish when two of the ten syntax roles could read as
