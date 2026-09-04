@@ -350,7 +350,7 @@
     "titleBar.inactiveForeground": "#545d68",
     "titleBar.border": "#2c2e2d",
     "statusBar.background": "#000000",
-    "statusBar.foreground": "#768390",
+    "statusBar.foreground": "#545d68",
     "statusBar.border": "#2c2e2d",
     "statusBar.debuggingBackground": "#0f62fe",
     "statusBar.debuggingForeground": "#ffffff",

@@ -475,7 +475,9 @@
     "titleBar.border": "#2c2e2d",
 
     "statusBar.background": "#000000",
-    "statusBar.foreground": "#8e8f8f",
+    // Aligned with activityBar.inactiveForeground: both bars are ambient chrome
+    // you glance at, not read. 2.2:1 on black — hover lifts it to #cdcecd.
+    "statusBar.foreground": "#4a4c4b",
     "statusBar.border": "#2c2e2d",
     "statusBar.debuggingBackground": "#0f62fe",
     "statusBar.debuggingForeground": "#ffffff",
