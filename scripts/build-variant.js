@@ -27,6 +27,8 @@ const CLASSIC_TO_DIMMED = {
 // it only survives on saturated badge fills, where dimming it would drop the
 // label under 3:1 against the fill.
 const CHROME_TEXT = {
+  "#f0f6fc": "#cdd9e5", // strong     gray[0]
+  "#e1e4e8": "#adbac7", // base text  gray[1]
   "#cdcecd": "#adbac7", // primary    gray[1]
   "#8e8f8f": "#768390", // secondary  gray[3]
   "#626463": "#636e7b", // tertiary   gray[4]

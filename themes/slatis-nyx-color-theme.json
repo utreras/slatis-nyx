@@ -77,7 +77,7 @@
     "inlineChat.foreground": "#cdcecd",
     "inlineChat.border": "#383a39",
     "inlineChat.shadow": "#000000a0",
-    "inlineChatInput.border": "#383a39",
+    "inlineChatInput.border": "#2c2e2d",
 
 
     // ---- Suggest widget / outline symbol icons ----
@@ -230,6 +230,12 @@
     "sideBySideEditor.verticalBorder": "#2c2e2d",
 
     // ---- Editor ----
+    // Global text fallback. Anything the theme does not name explicitly lands
+    // here — chat messages among them.
+    "foreground": "#e1e4e8",
+    "strongForeground": "#f0f6fc",
+    "disabledForeground": "#545d68",
+
     "editor.background": "#0b0b0b",
     "editor.foreground": "#e1e4e8",
     "editor.lineHighlightBackground": "#ffffff0a",
@@ -390,7 +396,7 @@
     "dropdown.foreground": "#cdcecd",
 
     "input.background": "#0b0b0b",
-    "input.border": "#383a39",
+    "input.border": "#2c2e2d",
     "input.foreground": "#cdcecd",
     "input.placeholderForeground": "#626463",
     "inputOption.activeBackground": "#4589ff30",
@@ -415,7 +421,7 @@
     "button.secondaryForeground": "#8e8f8f",
     "button.secondaryHoverBackground": "#202221",
     "checkbox.background": "#151616",
-    "checkbox.border": "#383a39",
+    "checkbox.border": "#2c2e2d",
 
     // ---- Lists / trees ----
     "list.hoverBackground": "#4589ff18",
@@ -548,8 +554,8 @@
     "settings.modifiedItemIndicator": "#4589ff",
     "settings.dropdownForeground": "#cdcecd",
     "settings.dropdownBorder": "#383a39",
-    "settings.textInputBorder": "#383a39",
-    "settings.numberInputBorder": "#383a39",
+    "settings.textInputBorder": "#2c2e2d",
+    "settings.numberInputBorder": "#2c2e2d",
     "settings.focusedRowBackground": "#151616",
     "settings.focusedRowBorder": "#4589ff40",
 
