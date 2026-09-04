@@ -36,17 +36,26 @@ const CHROME_TEXT = {
   "#4a4c4b": "#545d68", // muted      gray[5]
 };
 
-const dim = (v) =>
-  typeof v === "string" ? CHROME_TEXT[v.toLowerCase()] ?? v
-  : Array.isArray(v) ? v.map(dim)
-  : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, dim(x)]))
-  : v;
+// Substitution walks any value shape and is alpha-aware: "#62646345" is the
+// tertiary grey at 27% opacity, and matching only the full 8-digit string would
+// silently leave it undimmed.
+const substitute = (map) => {
+  const walk = (v) => {
+    if (typeof v === "string") {
+      const m = /^(#[0-9a-fA-F]{6})([0-9a-fA-F]{2})?$/.exec(v);
+      if (!m) return v;
+      const hit = map[m[1].toLowerCase()];
+      return hit ? hit + (m[2] ?? "") : v;
+    }
+    if (Array.isArray(v)) return v.map(walk);
+    if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, walk(x)]));
+    return v;
+  };
+  return walk;
+};
 
-const remap = (v) =>
-  typeof v === "string" ? CLASSIC_TO_DIMMED[v.toLowerCase()] ?? v
-  : Array.isArray(v) ? v.map(remap)
-  : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, remap(x)]))
-  : v;
+const dim = substitute(CHROME_TEXT);
+const remap = substitute(CLASSIC_TO_DIMMED);
 
 const themes = path.join(__dirname, "..", "themes");
 const src = fs.readFileSync(path.join(themes, "slatis-nyx-color-theme.json"), "utf8");
@@ -64,7 +73,7 @@ const out = {
     ...Object.fromEntries(
       Object.entries(base.colors)
         .filter(([k]) => k.startsWith("scmGraph."))
-        .map(([k, v]) => [k, remap(v)])
+        .map(([k, v]) => [k, remap(dim(v))])
     ),
   },
   semanticTokenColors: remap(base.semanticTokenColors),
