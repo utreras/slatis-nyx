@@ -44,6 +44,29 @@
 
   "colors": {
 
+    // ---- Source control graph ----
+    // Five lanes, ordered so no two adjacent hues form a red/green pair and
+    // each step also separates by lightness — the graph stays readable in
+    // grayscale and for deuteranopia, which is why VS Code's defaults look
+    // off-palette in the first place.
+    "scmGraph.foreground1": "#4589ff",
+    "scmGraph.foreground2": "#c9a3f0",
+    "scmGraph.foreground3": "#e97871",
+    "scmGraph.foreground4": "#f2c86c",
+    "scmGraph.foreground5": "#91dbf2",
+    "scmGraph.historyItemRefColor": "#4589ff",
+    "scmGraph.historyItemRemoteRefColor": "#c9a3f0",
+    "scmGraph.historyItemBaseRefColor": "#f2c86c",
+    "scmGraph.historyItemHoverLabelForeground": "#cdcecd",
+    "scmGraph.historyItemHoverDefaultLabelBackground": "#202221",
+    "scmGraph.historyItemHoverDefaultLabelForeground": "#cdcecd",
+    "scmGraph.historyItemHoverAdditionsForeground": "#42be65",
+    "scmGraph.historyItemHoverDeletionsForeground": "#fa4d56",
+
+    "descriptionForeground": "#626463",
+    "list.deemphasizedForeground": "#4a4c4b",
+
+
     // ---- Command center (header search pill) ----
     // Translucent so it reads as glass sitting on the title bar rather than a
     // second opaque slab. Alpha composites against titleBar.activeBackground.
